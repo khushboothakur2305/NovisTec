@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>OTP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form (submit)="submit(f)" #f="ngForm">
+          <ion-item>
+            <ion-label>Enter New Password</ion-label>
+            <ion-input type="number" name="newpassword" ngModel></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Re-Enter New Password</ion-label>
+            <ion-input type="number" name="repassword" ngModel></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col offset="5">
+              <ion-button type="submit()">Submit</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

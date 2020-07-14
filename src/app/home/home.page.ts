@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: "app-home",
+  templateUrl: "home.page.html",
+  styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-text="Change the text";
-  constructor() {}
-  OnChangeText(){
-this.text="Text Is Changed"
+  text = "Hello";
+  constructor(private router:Router) {}
+  hello() {
+  this.router.navigate(["otp1"]);
+   }
+  
   }
-}

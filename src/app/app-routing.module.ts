@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'otp1',
+    loadChildren: () => import('./otp1/otp1.module').then( m => m.OTP1PageModule)
+  },
 ];
 
 @NgModule({
