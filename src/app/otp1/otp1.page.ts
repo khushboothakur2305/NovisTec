@@ -11,7 +11,7 @@ export class OTP1Page implements OnInit {
 
   ngOnInit() {}
   submit(f: NgForm) {
-    console.log(f.value.newpassword);
-    console.log(f.value.repassword);
+    console.log(f.value.mail);
+    
   }
 }
