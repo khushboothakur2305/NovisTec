@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'select-city',
     loadChildren: () => import('./select-city/select-city.module').then( m => m.SelectCityPageModule)
   },
+  {
+    path: 'password-reset',
+    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
+  },
+  {
+    path: 'otp',
+    loadChildren: () => import('./otp/otp.module').then( m => m.OTPPageModule)
+  },
 ];
 
 @NgModule({
