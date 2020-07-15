@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class SelectClubPage implements OnInit {
   club: club[] = [
-    { name: "Fiction Club1", address: "Kimgston Road", image_url: "" },
-    { name: "Fiction Club2", address: "Kimgston Road", image_url: "" },
-    { name: "Fiction Club3", address: "Kimgston Road", image_url: "" },
-    { name: "Fiction Club4", address: "Kimgston Road", image_url: "" },
-    { name: "Fiction Club5", address: "Kimgston Road", image_url: "" },  ];
+    { name: "Fiction Club", address: "Kimgston Road", image_url: "/assets/lovechildLogo.png" },
+    { name: "Neon Club", address: "828 South Ketch Harbour Lane", image_url: "/assets/lovechildLogo.png" },
+    { name: "Rico's Club", address: "115 Oak Drive", image_url: "/assets/lovechildLogo.png" },
+    { name: "Tamilarsi Club", address: "8103 Birchwood Street", image_url: "/assets/lovechildLogo.png" },
+    { name: "Kim-Yu Club", address: "8881 homestead St.", image_url: "/assets/lovechildLogo.png" },  ];
   constructor(private router:Router) {}
 
   ngOnInit() {}

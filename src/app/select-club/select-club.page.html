@@ -12,7 +12,7 @@
   <ion-list>
    <ion-item *ngFor="let club of club" detail (click)="enter(club.name)">
     <ion-avatar slot="start">
-      <ion-img [src]="club.image_url"></ion-img>
+      <ion-img style="background-color: black;" [src]="club.image_url"></ion-img>
     </ion-avatar>
     <ion-label>
       <h2>{{club.name}}</h2>

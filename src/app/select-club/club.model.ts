@@ -3,7 +3,3 @@ export interface club{
     address:string;
     image_url:string;
 }
-export interface city{
-    cityname:string;
-    Cvalue:string;
-}
