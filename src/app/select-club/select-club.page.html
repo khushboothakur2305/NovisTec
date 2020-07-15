@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>Choose your club</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+   <ion-item *ngFor="let club of club" detail (click)="enter(club.name)">
+    <ion-avatar slot="start">
+      <ion-img [src]="club.image_url"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h2>{{club.name}}</h2>
+      <h3 class="h3">{{club.address}}</h3>      
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

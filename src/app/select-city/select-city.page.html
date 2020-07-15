@@ -1,0 +1,40 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-row>
+            <ion-col size="6" offset="3">
+              <ion-img src="\assets\novistec.png"> </ion-img>
+            </ion-col>
+          </ion-row>
+
+          <h1 style="text-align: center;">Club Handle</h1>
+          <h6 style="text-align: center;">By NovisTec</h6>
+          <br /><br>
+          <h3 style="text-align: center;">
+            Choose the CITY the<br />
+            club is located in
+          </h3>
+          <br />
+          <ion-item>
+            <ion-label>Select City</ion-label>
+            <ion-select value="select city" okText="Okay" cancelText="Dismiss" (click)="submit(value)">
+              <ion-select-option value="newyork">New York</ion-select-option>
+              <ion-select-option value="losangeles"
+                >Los Angeles</ion-select-option
+              >
+              <ion-select-option value="totontao">Toronto</ion-select-option>
+              <ion-select-option value="london">London</ion-select-option>
+              <ion-select-option value="montreal">Montreal</ion-select-option>
+              <ion-select-option value="vancouver">Vancouver</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
