@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (ionInput)="getClubs($event)"></ion-searchbar>
   <ion-list>
-    <ion-item *ngFor="let club of club" detail (click)="enter(club.name)">
+    <ion-item *ngFor="let club of Clubs" detail (click)="enter(club.name)">
       <ion-avatar slot="start">
         <ion-img
           style="background-color: black;"

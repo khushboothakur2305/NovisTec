@@ -30,8 +30,9 @@
           <form (ngSubmit)="onsubmit(f)" #f="ngForm">
             <ion-item>
               <ion-label>Choose the city</ion-label>
-              <ion-select name="select" ngModel>
-                <ion-select-option *ngFor="let item of city">
+              <ion-select name="select" ngModel>                
+             
+                <ion-select-option *ngFor="let item of Cities">
                   {{item}}
                 </ion-select-option>
               </ion-select>
