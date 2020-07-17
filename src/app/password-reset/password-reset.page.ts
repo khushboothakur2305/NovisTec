@@ -16,12 +16,12 @@ export class PasswordResetPage implements OnInit {
     this.pass1 = f.value.newpassword;
     this.pass2 = f.value.repassword;
     if (this.pass1 === this.pass2) {
-      this.router.navigate(["home"]);
+      this.router.navigate(["/login"]);
       console.log("sucessfull");
       return true;
     } else {
       console.log("UNsucessfull");
-      this.router.navigate(["password-reset"]);
+      this.router.navigate(["/password-reset"]);
       return false;
     }
   }

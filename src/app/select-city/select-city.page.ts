@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-select-city",
@@ -9,7 +10,7 @@ import { NgForm } from "@angular/forms";
 export class SelectCityPage implements OnInit {
   Cities;
 
-  constructor() {
+  constructor( private router : Router) {
     this.initializeCities();
   }
 
@@ -57,6 +58,7 @@ export class SelectCityPage implements OnInit {
 
   onsubmit(f: NgForm) {
     console.log(f.value.select);
+    this.router.navigate(["select-club"]);
   }
   ngOnInit() {}
 }

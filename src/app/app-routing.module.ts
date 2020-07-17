@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'otp',
     loadChildren: () => import('./otp/otp.module').then( m => m.OTPPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
