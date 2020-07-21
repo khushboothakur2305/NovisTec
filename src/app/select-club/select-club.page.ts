@@ -16,7 +16,7 @@ export class SelectClubPage implements OnInit {
 
   ngOnInit() {}
   enter(clubname: string) {
-    this.router.navigate(["otp1"]);
+    this.router.navigate(["login"]);
   }
   initializeClubs() {
     this.Clubs = [
