@@ -1,9 +1,57 @@
-<p *ngFor="let req of request">
-  <!-- {{req.group_detail|json}}   --><ion-card
-    *ngFor="let details of req.group_detail" (click)="groupdetails(req.groups_id)">
-    {{details.title}}<br>
-    No. of Females : {{ req.num_females }}<br />
-    No. of Males :{{ req.num_males }}<br />
-    No. of Others :{{ req.num_others }}<br />
-  </ion-card>
-</p>
+<div style="padding-top: 30px;">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <div>
+          <ion-segment class="month">
+            <p class="fontsize">{{ month }}</p>
+          </ion-segment>
+        </div>
+      </ion-col>
+      <ion-col size="2"> </ion-col>
+      <ion-col size="8">
+        <div>
+          <ion-segment scrollable>
+            <ion-segment-button
+              *ngFor="let category of days"
+              [value]="category"
+              (click)="onCategoryChange(category)"
+            >
+              <ion-label>
+                {{ category | date: "E" }}
+              </ion-label>
+              <ion-label class="date">
+                <p class="datefont">{{ category | date: "d" }}</p>
+              </ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div>
+  <div *ngFor="let req of request">
+    <!-- {{req.groudiv_detail|json}}   --><ion-card
+      class="card"
+      *ngFor="let details of req.group_detail"
+      (click)="groupdetails(req.groups_id)"
+    >
+      <ion-grid>
+        <ion-row
+          ><ion-col>
+            <img src="">
+          </ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+
+        {{ details.title }}<br />
+        No. of Females : {{ req.num_females }}<br />
+        No. of Males :{{ req.num_males }}<br />
+        No. of Others :{{ req.num_others }}<br />
+      </ion-grid>
+    </ion-card>
+  </div>
+</div>

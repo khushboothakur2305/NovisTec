@@ -11,8 +11,12 @@ import { SelectClubPage } from '../select-club/select-club.page';
   styleUrls: ["./table-page.page.scss"],
 })
 export class TablePagePage implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+ 
+  }
+  Table:string;
+  ngOnInit() {
+    this.Table="Request";
+  }
 
-  ngOnInit() {}
-Table:string;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: "app-request",
@@ -8,7 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ["./request.component.scss"],
 })
 export class RequestComponent implements OnInit {
-  constructor(private http: HttpClient,private reouter:Router) {}
+  constructor(private http: HttpClient,private reouter:Router,private datePipe:DatePipe) {}
+  nowmonth=new Date();
+  days: number[] = [];
+  month:string;
   request:any[]=[];
   requestdetails:any[]=[];
   token =
@@ -28,7 +32,20 @@ export class RequestComponent implements OnInit {
       this.request=re.data;
       console.log(this.request);
     })
+    this.month=this.datePipe.transform(this.nowmonth,'MMM');
+    for (let i = 0; i < 7; i++) {
+      let today = new Date();
+      let data = today.setDate(today.getDate() + i);
+      this.days.push(data);
+    }
+    console.log(this.days);
     };
+    onCategoryChange(category:Date){
+      console.log(this.datePipe.transform(category, "EEEE"));
+      console.log(this.datePipe.transform(category));
+     this.month = this.datePipe.transform(category,"MMM");
+      
+      }
     groupdetails(details:string){
       console.log(details);
 this.reouter.navigate(["table-page/request-group-details"])
