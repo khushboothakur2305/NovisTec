@@ -8,13 +8,22 @@
 </ion-header>
 
 <ion-content>
-  <div class="center" >
-    <ion-card class="cardfill"><p class="font">Detailed Table <br />Request</p></ion-card>
-    <ion-card class="card"><p class="font1">No Of People<br> <br />{{details.num_members}}</p></ion-card>
+  <div class="center">
+    <ion-card class="cardfill"
+      ><p class="font">Detailed Table <br />Request</p></ion-card
+    >
     <ion-card class="card"
-      ><p class="font1">No. of Male : {{details.num_males}}<br /><br>
-      No of Female : {{details.num_females}}<br /><br> No of Others :
-      {{details.num_others}}</p></ion-card
+      ><p class="font1">
+        No Of People<br />
+        <br />{{details.num_members}}
+      </p></ion-card
+    >
+    <ion-card class="card"
+      ><p class="font1">
+        No. of Male : {{details.num_males}}<br /><br />
+        No of Female : {{details.num_females}}<br /><br />
+        No of Others : {{details.num_others}}
+      </p></ion-card
     >
   </div>
   <div *ngFor="let details of details.members">
@@ -28,7 +37,7 @@
           </ion-col>
           <ion-col size="6">
             {{details[0].first_name}} {{details[0].last_name}} <br />
-            ({{details[0].gender}})</ion-col
+            ( {{details[0].gender}} )</ion-col
           >
           <ion-col size="3"
             ><ion-icon name="star" style="color: rgb(255, 160, 0);"></ion-icon
@@ -38,5 +47,22 @@
         </ion-row>
       </ion-grid>
     </ion-card>
+  </div>
+  <div   class="center">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center;" size="3">Accept Request</ion-col>
+        <ion-col size="3" class="center" >
+          <ion-fab-button color="success">
+          <ion-icon class="icon" color="dark" name="checkmark-done-circle"></ion-icon>
+          </ion-fab-button>
+        </ion-col>
+        <ion-col size="3" class="center">
+          <ion-fab-button color="danger">
+          <ion-icon class="icon" name="close-circle"></ion-icon></ion-fab-button>
+        </ion-col>
+        <ion-col style="text-align: center;"  size="3">Deny Request</ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
