@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'request-group-details',
     loadChildren: () => import('./request-group-details/request-group-details.module').then( m => m.RequestGroupDetailsPageModule)
+  },
+  {
+    path: 'confirmedgroup-details',
+    loadChildren: () => import('./confirmedgroup-details/confirmedgroup-details.module').then( m => m.ConfirmedgroupDetailsPageModule)
   }
 ];
 
