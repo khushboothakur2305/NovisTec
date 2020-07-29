@@ -15,14 +15,10 @@
   </ion-segment>
   <div [ngSwitch]="Table">
     <ion-list *ngSwitchCase="'Request'">
-      <ion-item>
-        <h1>Requested</h1>
-      </ion-item>
+       <app-request></app-request>
     </ion-list>
     <ion-list *ngSwitchCase="'Confirmed'">
-      <ion-item>
-        <h1>Confirmed</h1>
-      </ion-item>
+      <app-confirmed></app-confirmed>
     </ion-list>
   </div>
 </ion-content>

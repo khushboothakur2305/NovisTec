@@ -1,0 +1,9 @@
+<p *ngFor="let req of request">
+  <!-- {{req.group_detail|json}}   --><ion-card
+    *ngFor="let details of req.group_detail" (click)="groupdetails(req.groups_id)">
+    {{details.title}}<br>
+    No. of Females : {{ req.num_females }}<br />
+    No. of Males :{{ req.num_males }}<br />
+    No. of Others :{{ req.num_others }}<br />
+  </ion-card>
+</p>

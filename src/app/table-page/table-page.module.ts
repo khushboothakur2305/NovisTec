@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { TablePagePageRoutingModule } from './table-page-routing.module';
 
 import { TablePagePage } from './table-page.page';
+import { RequestComponent } from './request/request.component';
+import { ConfirmedComponent } from './confirmed/confirmed.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { TablePagePage } from './table-page.page';
     IonicModule,
     TablePagePageRoutingModule
   ],
-  declarations: [TablePagePage]
+  declarations: [TablePagePage,RequestComponent,ConfirmedComponent]
 })
 export class TablePagePageModule {}
