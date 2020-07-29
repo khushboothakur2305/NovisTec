@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-select-city",
@@ -10,8 +11,8 @@ import { Router } from '@angular/router';
 export class SelectCityPage implements OnInit {
   Cities;
 
-  constructor( private router : Router) {
-    this.initializeCities();
+  constructor(private router: Router, private http: HttpClient) {
+    // this.initializeCities();
   }
 
   initializeCities() {
@@ -60,5 +61,17 @@ export class SelectCityPage implements OnInit {
     console.log(f.value.select);
     this.router.navigate(["select-club"]);
   }
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.http
+      .get<{ status: boolean; message: string; data: any }>(
+        "https://4obg8v558d.execute-api.ap-south-1.amazonaws.com/dev/citylist"
+      )
+      .subscribe((re) => {
+        console.log(re);
+        if ((re.status = true)) {
+          console.log("Successfull");
+        }
+      });
+  }
 }

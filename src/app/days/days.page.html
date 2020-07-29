@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><h3>Guest List</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div  *ngFor="let day of dates">
+    <ion-card>
+      <ion-content>
+        <ion-label>
+          {{day|date:'MMM'}}
+        </ion-label>
+      </ion-content>
+    </ion-card>
+  </div>
+<div *ngFor="let day of dates">
+  
+  <ion-card style="background-color:rgb(255,160,0); "(click)="selectedday(day)">
+    <ion-card-title style="text-align: center; color: black;">
+
+      <h1>{{ day | date:'EEEE' }}</h1>
+      
+      <h1>{{ day | date }}</h1>
+      </ion-card-title>
+    </ion-card>
+  </div>
+</ion-content>

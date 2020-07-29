@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Table Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="Table">
+    <ion-segment-button value="Request">
+      <ion-label>Request</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Confirmed">
+      <ion-label>Confirmed</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="Table">
+    <ion-list *ngSwitchCase="'Request'">
+      <ion-item>
+        <h1>Requested</h1>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'Confirmed'">
+      <ion-item>
+        <h1>Confirmed</h1>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

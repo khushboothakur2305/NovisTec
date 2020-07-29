@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>week</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let day of days">
+    <ion-card>
+      <h2>{{day|date}}</h2>
+      <h4>{{day|date:'EEEE'}}</h4>
+    </ion-card>
+  </div>
+</ion-content>

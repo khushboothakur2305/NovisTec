@@ -1,0 +1,28 @@
+
+ion-segment-button {
+  --color-checked: rgb(255, 160, 0);
+}
+
+ion-label {
+  color: rgb(255, 160, 0);
+}
+.date {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 160, 0);
+}
+.datefont {
+  padding-top: 15px;
+  color: black;
+  font-size: 20px;
+}
+.month {
+  width: 80px;
+  height: 120px;
+  border: 2px solid rgb(255, 160, 0);
+  border-radius: 50px;
+  color: rgb(255, 160, 0);
+  padding-top: 20%;
+  font-size: 30px;
+}

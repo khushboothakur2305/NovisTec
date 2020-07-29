@@ -35,6 +35,22 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'days',
+    loadChildren: () => import('./days/days.module').then( m => m.DaysPageModule)
+  },
+  {
+    path: 'week',
+    loadChildren: () => import('./week/week.module').then( m => m.WeekPageModule)
+  },
+  {
+    path: 'slider',
+    loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
+  },
+  {
+    path: 'table-page',
+    loadChildren: () => import('./table-page/table-page.module').then( m => m.TablePagePageModule)
+  },
 ];
 
 @NgModule({
