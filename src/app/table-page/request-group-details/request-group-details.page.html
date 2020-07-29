@@ -8,5 +8,17 @@
 </ion-header>
 
 <ion-content>
+  <div class="center">
+    <ion-card class="cardfill">Detailed Table <br />Request</ion-card>
+    <ion-card class="card">No Of People <br />{{details.num_members}}</ion-card>
+    <ion-card class="card"
+      >No. of Male : {{details.num_males}}<br />
+      No of Female : {{details.num_females}}<br />Others :
+      {{details.num_others}}</ion-card
+    >
+  </div>
 
+  <div *ngFor="let details of details.members">
+    {{details[0].first_name}}
+  </div>
 </ion-content>
